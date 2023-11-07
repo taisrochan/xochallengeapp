@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="XOChallenge" customModuleProvider="target">
+            <connections>
+                <outlet property="checkPlayHistoryButton" destination="Nhe-sv-ZOf" id="yb6-za-R4L"/>
+                <outlet property="playerOneTextField" destination="QQU-bu-FzX" id="YB4-eL-3aN"/>
+                <outlet property="playerTwoTextField" destination="rh1-8M-m80" id="lJX-0b-Sj5"/>
+                <outlet property="segmentedControl" destination="hxo-wZ-rE9" id="dHm-il-qkM"/>
+                <outlet property="sizeOfBoardButton" destination="pYh-6o-96g" id="crP-jt-mEr"/>
+                <outlet property="sizeOfBoardTextField" destination="4qE-8x-XdB" id="AIN-vu-z6c"/>
+                <outlet property="startTheGameButton" destination="2Ju-Gp-7GW" id="lAP-nW-h3x"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome Jogador 1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QQU-bu-FzX">
+                    <rect key="frame" x="16" y="287.66666666666669" width="361" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome Jogador 2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rh1-8M-m80">
+                    <rect key="frame" x="16" y="341.66666666666669" width="361" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex.: 3x3" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4qE-8x-XdB">
+                    <rect key="frame" x="140" y="460.33333333333331" width="237" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XO Challenge App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WXC-Ja-w8H">
+                    <rect key="frame" x="16" y="119.00000000000001" width="361" height="31.666666666666671"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                    <color key="textColor" systemColor="systemMintColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecione contra quem irá jogar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHx-Fz-ret">
+                    <rect key="frame" x="16" y="190.66666666666666" width="361" height="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hxo-wZ-rE9">
+                    <rect key="frame" x="16" y="220.66666666666666" width="361" height="32"/>
+                    <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                    <segments>
+                        <segment title="Pessoa"/>
+                        <segment title="Robô"/>
+                    </segments>
+                    <color key="selectedSegmentTintColor" systemColor="systemMintColor"/>
+                    <connections>
+                        <action selector="didChangeSegmentedControl:" destination="-1" eventType="valueChanged" id="6sF-vX-iol"/>
+                    </connections>
+                </segmentedControl>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYh-6o-96g">
+                    <rect key="frame" x="16" y="459.66666666666669" width="104" height="35"/>
+                    <color key="backgroundColor" systemColor="systemMintColor"/>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Selecionar"/>
+                    <connections>
+                        <action selector="didClickSizeButton:" destination="-1" eventType="touchUpInside" id="tr0-dP-Aqk"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ju-Gp-7GW">
+                    <rect key="frame" x="80" y="696" width="233" height="35"/>
+                    <color key="backgroundColor" systemColor="systemMintColor"/>
+                    <color key="tintColor" systemColor="labelColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Começar o jogo!"/>
+                    <connections>
+                        <action selector="startTheGame:" destination="-1" eventType="touchUpInside" id="dLP-cJ-rAE"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nhe-sv-ZOf">
+                    <rect key="frame" x="80" y="751" width="233" height="35"/>
+                    <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                    <color key="tintColor" systemColor="labelColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Ver histórico de jogadas"/>
+                    <connections>
+                        <action selector="checkPlayHistory:" destination="-1" eventType="touchUpInside" id="T74-Wb-isT"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecione o tamanho do tabuleiro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X18-po-2Zm">
+                    <rect key="frame" x="16" y="415.66666666666669" width="361" height="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="JHx-Fz-ret" firstAttribute="leading" secondItem="WXC-Ja-w8H" secondAttribute="leading" id="295-AW-HPP"/>
+                <constraint firstItem="QQU-bu-FzX" firstAttribute="top" secondItem="hxo-wZ-rE9" secondAttribute="bottom" constant="36" id="CS9-x1-N7W"/>
+                <constraint firstItem="JHx-Fz-ret" firstAttribute="trailing" secondItem="WXC-Ja-w8H" secondAttribute="trailing" id="DPW-Ey-anB"/>
+                <constraint firstItem="Nhe-sv-ZOf" firstAttribute="top" secondItem="2Ju-Gp-7GW" secondAttribute="bottom" constant="20" id="DxK-Yo-j8D"/>
+                <constraint firstItem="QQU-bu-FzX" firstAttribute="trailing" secondItem="hxo-wZ-rE9" secondAttribute="trailing" id="GjZ-A1-mRe"/>
+                <constraint firstItem="4qE-8x-XdB" firstAttribute="leading" secondItem="pYh-6o-96g" secondAttribute="trailing" constant="20" id="J9l-5q-vWI"/>
+                <constraint firstItem="4qE-8x-XdB" firstAttribute="centerY" secondItem="pYh-6o-96g" secondAttribute="centerY" id="JlU-K8-cqt"/>
+                <constraint firstItem="hxo-wZ-rE9" firstAttribute="trailing" secondItem="JHx-Fz-ret" secondAttribute="trailing" id="MOU-Hv-UXO"/>
+                <constraint firstItem="X18-po-2Zm" firstAttribute="top" secondItem="rh1-8M-m80" secondAttribute="bottom" constant="40" id="Pz9-b5-hkR"/>
+                <constraint firstItem="QQU-bu-FzX" firstAttribute="leading" secondItem="hxo-wZ-rE9" secondAttribute="leading" id="R15-Q4-csg"/>
+                <constraint firstItem="WXC-Ja-w8H" firstAttribute="top" relation="greaterThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="S1o-bw-FbN"/>
+                <constraint firstItem="2Ju-Gp-7GW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="80" id="VWP-t7-57A"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Nhe-sv-ZOf" secondAttribute="bottom" constant="32" id="Ve6-Db-PyP"/>
+                <constraint firstItem="X18-po-2Zm" firstAttribute="leading" secondItem="rh1-8M-m80" secondAttribute="leading" id="aXe-Ez-MVP"/>
+                <constraint firstItem="JHx-Fz-ret" firstAttribute="top" secondItem="WXC-Ja-w8H" secondAttribute="bottom" constant="40" id="ad9-cf-ose"/>
+                <constraint firstItem="pYh-6o-96g" firstAttribute="top" secondItem="X18-po-2Zm" secondAttribute="bottom" constant="24" id="bLk-ca-iGB"/>
+                <constraint firstItem="4qE-8x-XdB" firstAttribute="trailing" secondItem="X18-po-2Zm" secondAttribute="trailing" id="blx-hB-84w"/>
+                <constraint firstItem="hxo-wZ-rE9" firstAttribute="top" secondItem="JHx-Fz-ret" secondAttribute="bottom" constant="10" id="cld-Rn-yyF"/>
+                <constraint firstItem="2Ju-Gp-7GW" firstAttribute="top" relation="greaterThanOrEqual" secondItem="pYh-6o-96g" secondAttribute="bottom" constant="10" id="j6H-kl-jhl"/>
+                <constraint firstItem="WXC-Ja-w8H" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="jBq-bW-rQr"/>
+                <constraint firstItem="X18-po-2Zm" firstAttribute="trailing" secondItem="rh1-8M-m80" secondAttribute="trailing" id="lkv-FB-XfX"/>
+                <constraint firstItem="rh1-8M-m80" firstAttribute="trailing" secondItem="QQU-bu-FzX" secondAttribute="trailing" id="m0t-HS-pnN"/>
+                <constraint firstItem="rh1-8M-m80" firstAttribute="leading" secondItem="QQU-bu-FzX" secondAttribute="leading" id="mhn-lB-45z"/>
+                <constraint firstItem="Nhe-sv-ZOf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="80" id="scA-Q9-EJ4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2Ju-Gp-7GW" secondAttribute="trailing" constant="80" id="uAe-Z2-60j"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WXC-Ja-w8H" secondAttribute="trailing" constant="16" id="uiS-zx-Aeg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Nhe-sv-ZOf" secondAttribute="trailing" constant="80" id="yeL-2b-d8d"/>
+                <constraint firstItem="pYh-6o-96g" firstAttribute="leading" secondItem="X18-po-2Zm" secondAttribute="leading" id="yma-vi-p4m"/>
+                <constraint firstItem="hxo-wZ-rE9" firstAttribute="leading" secondItem="JHx-Fz-ret" secondAttribute="leading" id="yrf-tI-tGd"/>
+                <constraint firstItem="rh1-8M-m80" firstAttribute="top" secondItem="QQU-bu-FzX" secondAttribute="bottom" constant="20" id="zOt-Tg-Gw3"/>
+                <constraint firstItem="WXC-Ja-w8H" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" priority="250" constant="60" id="zYz-L5-o7L"/>
+            </constraints>
+            <point key="canvasLocation" x="113.74045801526717" y="-11.267605633802818"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
